@@ -35,7 +35,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           Hi! Abdullah here
         </h1>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-700 tracking-tight leading-snug flex flex-wrap items-baseline gap-x-2 gap-y-1">
-          <span>I</span>
           <span className="relative inline-block px-1.5 py-0.5 z-0 font-medium text-slate-900">
             <span
               className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10 transform -rotate-1"
