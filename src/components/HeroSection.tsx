@@ -41,14 +41,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
               className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10 transform -rotate-1"
               aria-hidden="true"
             />
-            coding,
+            designing,
           </span>
           <span className="relative inline-block px-1.5 py-0.5 z-0 font-medium text-slate-900">
             <span
               className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10 transform rotate-1"
               aria-hidden="true"
             />
-            building,
+            researching,
           </span>
           <span>and</span>
           <span className="relative inline-block px-2 py-0.5 z-0 font-medium text-slate-900">
@@ -56,7 +56,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
               className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10"
               aria-hidden="true"
             />
-            engineering the future.
+            diving into tech.
           </span>
         </h2>
       </div>
