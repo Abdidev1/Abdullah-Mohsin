@@ -63,7 +63,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
       {/* 3 Action Buttons / Pills in a row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 my-8">
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/abdullah-mohsin-b677b0426/"
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center gap-2.5 px-5 py-3.5 bg-white hover:bg-slate-50 border border-slate-300/80 hover:border-slate-400 rounded-2xl text-slate-800 text-sm font-semibold transition-all hover:shadow-xs group cursor-pointer"
@@ -73,7 +73,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         </a>
 
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/_abdullahmohsin__/"
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center gap-2.5 px-5 py-3.5 bg-white hover:bg-slate-50 border border-slate-300/80 hover:border-slate-400 rounded-2xl text-slate-800 text-sm font-semibold transition-all hover:shadow-xs group cursor-pointer"
@@ -82,13 +82,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           <span>Instagram</span>
         </a>
 
-        <button
-          onClick={onOpenContact}
+        <a
+          href="mailto:mustafamohsin976@gmail.com"
           className="flex items-center justify-center gap-2.5 px-5 py-3.5 bg-white hover:bg-slate-50 border border-slate-300/80 hover:border-slate-400 rounded-2xl text-slate-800 text-sm font-semibold transition-all hover:shadow-xs group cursor-pointer"
         >
           <Mail className="w-4 h-4 text-slate-700 group-hover:scale-110 transition-transform" />
           <span>Email me!</span>
-        </button>
+        </a>
       </div>
 
       {/* 2 Content Cards Grid */}
