@@ -32,7 +32,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
       {/* Main Headline */}
       <div className="max-w-4xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-950 mb-3 font-sans">
-          Hi! Javeria here
+          Hi! Abdullah here
         </h1>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-700 tracking-tight leading-snug flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <span>I</span>
@@ -64,7 +64,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
       {/* 3 Action Buttons / Pills in a row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 my-8">
         <a
-          href="https://linkedin.com/in/javeria-syed"
+          href="https://linkedin.com"
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center gap-2.5 px-5 py-3.5 bg-white hover:bg-slate-50 border border-slate-300/80 hover:border-slate-400 rounded-2xl text-slate-800 text-sm font-semibold transition-all hover:shadow-xs group cursor-pointer"
