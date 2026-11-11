@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Instagram, Linkedin, Code2 } from 'lucide-react';
+import { Mail, Instagram, Linkedin } from 'lucide-react';
 
 interface HeroSectionProps {
   onOpenContact: () => void;
@@ -29,17 +29,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
 
   return (
     <section id="home" className="relative pt-6 pb-4">
-      {/* Top Left decorative logo button */}
-      <div className="mb-8">
-        <a
-          href="#home"
-          aria-label="Javeria Syed home"
-          className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-pink-50/80 border border-pink-200/80 text-[#4338ca] hover:scale-105 transition-all shadow-xs"
-        >
-          <Code2 className="w-5 h-5 text-[#4338ca]" strokeWidth={2.5} />
-        </a>
-      </div>
-
       {/* Main Headline */}
       <div className="max-w-4xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-950 mb-3 font-sans">
@@ -119,9 +108,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         </div>
 
         {/* Right card: What am i up to right now? */}
-        <div className="lg:col-span-4 p-7 md:p-8 bg-[#fdeef2] rounded-3xl border border-[#fbdbe3] shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex flex-col justify-center">
+        <div className="lg:col-span-4 p-7 md:p-8 bg-[#fdeef2] rounded-3xl border border-[#fbdbd3] shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex flex-col justify-center">
           <h3 className="text-sm md:text-base font-semibold text-slate-900 mb-3 flex items-center gap-1.5">
-            <span className="text-pink-600 font-bold text-lg">✱</span>
+            <span className="text-pink-600 font-bold text-lg">✦</span>
             <span>What am i up to right now?</span>
           </h3>
           <p className="text-slate-800 text-sm md:text-base leading-relaxed">
