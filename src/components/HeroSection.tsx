@@ -100,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           </h3>
           <div className="text-slate-600 text-sm md:text-base leading-relaxed space-y-3">
             <p>
-              I&apos;m Abdullah Mohsin, a 15-year-old developer from Lahore. I founded Apex Realms
+              I&apos;m Abdullah Mohsin, a 15 year old developer from Lahore. I founded Apex Realms
               Studios back in June 2025 to build proper Roblox games from scratch, and since then,
               I&apos;ve spent my time making obbies, platformers, and random web projects.
             </p>
