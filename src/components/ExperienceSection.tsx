@@ -4,10 +4,9 @@ interface ExperienceItem {
   role: string;
   organization: string;
   period: string;
-  location: string;
+  location?: string;
   summary: string;
   tags: string[];
-  highlighted?: boolean;
 }
 
 export const ExperienceSection: React.FC = () => {
@@ -16,11 +15,9 @@ export const ExperienceSection: React.FC = () => {
       role: 'Founder & Senior Engineer',
       organization: 'Apex Realms Studios',
       period: 'Jun 2025 – Present',
-      location: 'Lahore, Pakistan',
       summary:
-        'Founded an independent Roblox studio building custom obbies, platformers, and competitive experiences from scratch, including Pixel Climb.',
-      tags: ['Luau', 'Roblox Studio', 'Game Systems'],
-      highlighted: true,
+        'Founded Apex Realms Studios Back in 2025 & developing obbies like Pixel Climb.',
+      tags: [],
     },
     {
       role: 'Game Jam & Hackathon Developer',
@@ -69,11 +66,7 @@ export const ExperienceSection: React.FC = () => {
         {experiences.map((exp, idx) => (
           <div
             key={idx}
-            className={`rounded-3xl border p-6 sm:p-7 transition-all duration-200 ${
-              exp.highlighted
-                ? 'bg-[#9D00FF]/10 border-[#9D00FF]/30 shadow-[0_2px_8px_rgba(0,0,0,0.02)]'
-                : 'bg-white border-slate-200/80 hover:border-[#9D00FF]/30 shadow-xs'
-            }`}
+            className="rounded-3xl border bg-white border-slate-200/80 hover:border-[#9D00FF]/30 shadow-xs p-6 sm:p-7 transition-all duration-200"
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
@@ -93,20 +86,22 @@ export const ExperienceSection: React.FC = () => {
 
               <div className="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-1 shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 <span className="text-slate-800">{exp.period}</span>
-                <span>{exp.location}</span>
+                {exp.location && <span>{exp.location}</span>}
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200/60">
-              {exp.tags.map((tag, tIdx) => (
-                <span
-                  key={tIdx}
-                  className="text-xs font-medium text-slate-700"
-                >
-                  {tag}{tIdx < exp.tags.length - 1 ? ' ·' : ''}
-                </span>
-              ))}
-            </div>
+            {exp.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200/60">
+                {exp.tags.map((tag, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="text-xs font-medium text-slate-700"
+                  >
+                    {tag}{tIdx < exp.tags.length - 1 ? ' ·' : ''}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
