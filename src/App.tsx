@@ -4,6 +4,7 @@ import { HeroSection } from './components/HeroSection';
 import { WorkSection, ProjectData } from './components/WorkSection';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { ExperienceSection } from './components/ExperienceSection';
+import { HackathonsSection } from './components/HackathonsSection';
 import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
@@ -139,6 +140,8 @@ export default function App() {
         <HeroSection onOpenContact={() => setIsContactModalOpen(true)} />
 
         <ExperienceSection />
+
+        <HackathonsSection />
 
         <WorkSection onSelectProject={(project) => setSelectedProject(project)} />
 
