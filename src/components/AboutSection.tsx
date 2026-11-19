@@ -24,7 +24,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
         <a
           href="#home"
           aria-label="Back to top"
-          className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-pink-50/80 border border-pink-200/80 text-[#4338ca] hover:scale-105 transition-all shadow-xs"
+          className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-pink-50/80 border border-[#9D00FF]/30/80 text-[#4338ca] hover:scale-105 transition-all shadow-xs"
         >
           <Code2 className="w-5 h-5 text-[#4338ca]" strokeWidth={2.5} />
         </a>
@@ -50,10 +50,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
           {/* Top Row: Process Card (Left) & Empathy / Skyline Card (Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Card 1: My process (ever-changing) */}
-            <div className="lg:col-span-6 relative bg-gradient-to-br from-[#fdeef2] to-[#fce4ec] rounded-3xl p-7 sm:p-8 border border-[#fad2dd] shadow-xs overflow-hidden flex flex-col justify-between">
+            <div className="lg:col-span-6 relative bg-gradient-to-br from-[#9D00FF]/10 to-[#9D00FF]/15 rounded-3xl p-7 sm:p-8 border border-[#9D00FF]/30 shadow-xs overflow-hidden flex flex-col justify-between">
               {/* Subtle decorative concentric waves on the right */}
-              <div className="absolute right-4 bottom-4 w-40 h-40 border-8 border-pink-200/40 rounded-3xl pointer-events-none transform rotate-12 -z-0 opacity-50" />
-              <div className="absolute right-8 bottom-8 w-28 h-28 border-8 border-pink-200/40 rounded-2xl pointer-events-none transform rotate-12 -z-0 opacity-50" />
+              <div className="absolute right-4 bottom-4 w-40 h-40 border-8 border-[#9D00FF]/20 rounded-3xl pointer-events-none transform rotate-12 -z-0 opacity-50" />
+              <div className="absolute right-8 bottom-8 w-28 h-28 border-8 border-[#9D00FF]/20 rounded-2xl pointer-events-none transform rotate-12 -z-0 opacity-50" />
 
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-slate-900 tracking-tight mb-6">
@@ -69,7 +69,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
                     'Collaborate, ship, and iterate',
                   ].map((step, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-slate-800 text-sm font-medium">
-                      <div className="w-5 h-5 rounded-full bg-white shadow-xs flex items-center justify-center text-[#4338ca] shrink-0 border border-pink-200">
+                      <div className="w-5 h-5 rounded-full bg-white shadow-xs flex items-center justify-center text-[#4338ca] shrink-0 border border-[#9D00FF]/30">
                         <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                       </div>
                       <span>{step}</span>
@@ -135,7 +135,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight mb-4">
-              Bringing <span className="font-extrabold underline decoration-pink-300 decoration-wavy decoration-2">clarity to complexity</span>, one interface at a time!
+              Bringing <span className="font-extrabold underline decoration-[#9D00FF] decoration-wavy decoration-2">clarity to complexity</span>, one interface at a time!
             </h3>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-4xl">
