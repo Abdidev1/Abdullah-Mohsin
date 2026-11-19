@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Mail, Instagram, Linkedin } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -6,27 +6,6 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
-  const [germanyTime, setGermanyTime] = useState<string>('');
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      // Format time in Germany time zone (Europe/Berlin, typically GMT+1 or GMT+2 depending on DST)
-      const options: Intl.DateTimeFormatOptions = {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'Europe/Berlin',
-      };
-      const timeStr = new Intl.DateTimeFormat('en-US', options).format(now);
-      setGermanyTime(`${timeStr} GMT+1`);
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section id="home" className="relative pt-6 pb-4">
       {/* Main Headline */}
@@ -126,13 +105,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         </div>
       </div>
 
-      {/* Location & Time bar with thin hairline borders */}
+      {/* Location bar with thin hairline borders */}
       <div className="pt-3 pb-6 border-t border-b border-slate-200/80 flex items-center justify-between text-xs tracking-wider font-semibold text-slate-500 uppercase">
         <div className="flex items-center gap-2">
-          <span>GERMANY</span>
+          <span>PAKISTAN</span>
         </div>
         <div className="tabular-nums font-mono text-slate-600">
-          {germanyTime || '1:55 PM GMT+1'}
+          GMT +5
         </div>
       </div>
     </section>
