@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { WorkSection, ProjectData } from './components/WorkSection';
+import { ProjectsSection, ProjectData } from './components/ProjectsSection';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { HackathonsSection } from './components/HackathonsSection';
@@ -33,13 +33,13 @@ export default function App() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
       const homeEl = document.getElementById('home');
-      const workEl = document.getElementById('work');
+      const projectsEl = document.getElementById('projects');
       const aboutEl = document.getElementById('about');
 
       if (aboutEl && scrollPosition >= aboutEl.offsetTop) {
         setActiveSection('about');
-      } else if (workEl && scrollPosition >= workEl.offsetTop) {
-        setActiveSection('work');
+      } else if (projectsEl && scrollPosition >= projectsEl.offsetTop) {
+        setActiveSection('projects');
       } else if (homeEl) {
         setActiveSection('home');
       }
@@ -143,7 +143,7 @@ export default function App() {
 
         <HackathonsSection />
 
-        <WorkSection onSelectProject={(project) => setSelectedProject(project)} />
+        <ProjectsSection onSelectProject={(project) => setSelectedProject(project)} />
 
         <ExpertiseSection />
 
