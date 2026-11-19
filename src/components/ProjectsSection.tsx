@@ -20,7 +20,6 @@ interface ProjectsSectionProps {
 
 interface ProjectItem {
   name: string;
-  category: string;
   period: string;
   description: string;
   link?: string;
@@ -30,35 +29,30 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
   const projects: ProjectItem[] = [
     {
       name: 'Pixel Climb',
-      category: 'Roblox Experience · Apex Realms Studios',
       period: '2025 – Present',
       description:
         'A 240+ stage platforming obby built from scratch in Roblox Studio with stage progression, checkpoints, and UI.',
     },
     {
       name: 'Deflecto',
-      category: 'Game Jam Project · Team Sonion',
       period: 'Nov 2026',
       description:
         'A river-obstacle game created for Hackclub Haven under the bounce back theme.',
     },
     {
       name: 'Dungeon Crawler',
-      category: 'Game Jam Project · Team Dungeons',
       period: 'Feb 2026',
       description:
         'A 2D maze game built for Hackclub Campfire Flagship under the below the surface theme.',
     },
     {
       name: 'Creest',
-      category: 'Web Application',
       period: '2026',
       description:
         'A privacy-focused wishlist and gifting web app built with modern web tools and clean UI.',
     },
     {
       name: "90's Era Web OS",
-      category: 'Browser Simulator',
       period: '2026',
       description:
         'A retro desktop experience running in the browser with windowed apps and classic UI styling.',
@@ -87,15 +81,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">
-                    {project.name}
-                  </h3>
-                  <span className="text-slate-400 font-medium">·</span>
-                  <span className="text-sm sm:text-base font-semibold text-[#9D00FF]">
-                    {project.category}
-                  </span>
-                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">
+                  {project.name}
+                </h3>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-1.5 max-w-3xl">
                   {project.description}
                 </p>
