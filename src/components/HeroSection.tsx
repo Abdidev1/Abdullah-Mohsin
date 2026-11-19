@@ -120,10 +120,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             <span>What am i up to right now?</span>
           </h3>
           <p className="text-slate-800 text-sm md:text-base leading-relaxed">
-            Doing my masters at{' '}
-            <strong className="font-bold text-slate-950">University of Siegen</strong> and a working
-            student at{' '}
-            <strong className="font-bold text-slate-950">Siemens Healthineers! :D</strong>
+            Completing my highschool from{' '}
+            <strong className="font-bold text-slate-950">Allied Schools! :D</strong>
           </p>
         </div>
       </div>
