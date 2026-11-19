@@ -20,13 +20,12 @@ export const ExperienceSection: React.FC = () => {
       tags: [],
     },
     {
-      role: 'Game Jam & Hackathon Developer',
-      organization: 'Hack Club (Campfire & Haven)',
+      role: 'Member & YSWS Programs Participant',
+      organization: 'HackClub',
       period: '2026',
-      location: 'Lahore, Pakistan',
       summary:
-        'Teamed up under tight deadlines to build and ship indie games and interactive projects across hackathons and game jams.',
-      tags: ['GameMaker', 'Rapid Prototyping', 'Teamwork'],
+        'Active Community Member of Hackclub and YSWS Programs Participant making many projects.',
+      tags: [],
     },
     {
       role: 'Developer Contributor',
