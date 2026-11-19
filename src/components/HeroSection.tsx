@@ -98,12 +98,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
             I'm glad you're here!
           </h3>
-          <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-            From designing multiple end-to-end products to leading UX Design sessions at Udacity to
-            120+ students, I've worked across the spectrum. I care deeply about creating products
-            that are clear, research-backed, highly-converting and make the most complex problems
-            feel simple.
-          </p>
+          <div className="text-slate-600 text-sm md:text-base leading-relaxed space-y-3">
+            <p>
+              I&apos;m Abdullah Mohsin, a 15-year-old developer from Lahore. I founded Apex Realms
+              Studios back in June 2025 to build proper Roblox games from scratch, and since then,
+              I&apos;ve spent my time making obbies, platformers, and random web projects.
+            </p>
+            <p>
+              I also love getting involved in hackathons, gamejams or live events, I&apos;ve
+              participated in game jams like Campfire and Haven, where I teamed up to ship games
+              under tight deadlines. I care a lot about making things that are clean, simple, and
+              actually fun to use without overcomplicating stuff.
+            </p>
+          </div>
         </div>
 
         {/* Right card: What am i up to right now? */}
