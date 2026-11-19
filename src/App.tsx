@@ -138,11 +138,11 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <HeroSection onOpenContact={() => setIsContactModalOpen(true)} />
 
+        <ExperienceSection />
+
         <WorkSection onSelectProject={(project) => setSelectedProject(project)} />
 
         <ExpertiseSection />
-
-        <ExperienceSection />
 
         <AboutSection onOpenContact={() => setIsContactModalOpen(true)} />
 
