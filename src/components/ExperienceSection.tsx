@@ -1,5 +1,4 @@
 import React from 'react';
-import { Briefcase, Sparkles, Terminal, Users } from 'lucide-react';
 
 interface ExperienceItem {
   role: string;
@@ -8,7 +7,6 @@ interface ExperienceItem {
   location: string;
   summary: string;
   tags: string[];
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
   highlighted?: boolean;
 }
 
@@ -22,7 +20,6 @@ export const ExperienceSection: React.FC = () => {
       summary:
         'Founded an independent Roblox studio building custom obbies, platformers, and competitive experiences from scratch, including Pixel Climb.',
       tags: ['Luau', 'Roblox Studio', 'Game Systems'],
-      icon: Terminal,
       highlighted: true,
     },
     {
@@ -33,7 +30,6 @@ export const ExperienceSection: React.FC = () => {
       summary:
         'Teamed up under tight deadlines to build and ship indie games and interactive projects across hackathons and game jams.',
       tags: ['GameMaker', 'Rapid Prototyping', 'Teamwork'],
-      icon: Sparkles,
     },
     {
       role: 'Developer Contributor',
@@ -43,7 +39,6 @@ export const ExperienceSection: React.FC = () => {
       summary:
         'Contributed development work and technical support across community-driven experiences and tools.',
       tags: ['Development', 'Community', 'Web & Games'],
-      icon: Users,
     },
     {
       role: 'Indie Game & Web Developer',
@@ -53,7 +48,6 @@ export const ExperienceSection: React.FC = () => {
       summary:
         'Built web applications, interactive simulators, and small games focused on clean UI, clarity, and responsive interactions.',
       tags: ['TypeScript', 'React', 'Web Apps'],
-      icon: Briefcase,
     },
   ];
 
@@ -72,57 +66,49 @@ export const ExperienceSection: React.FC = () => {
       </div>
 
       <div className="space-y-4">
-        {experiences.map((exp, idx) => {
-          const IconComponent = exp.icon;
-          return (
-            <div
-              key={idx}
-              className={`rounded-3xl border p-6 sm:p-7 transition-all duration-200 ${
-                exp.highlighted
-                  ? 'bg-[#9D00FF]/10 border-[#9D00FF]/30 shadow-[0_2px_8px_rgba(0,0,0,0.02)]'
-                  : 'bg-white border-slate-200/80 hover:border-[#9D00FF]/30 shadow-xs'
-              }`}
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white border border-slate-200/80 flex items-center justify-center shrink-0 shadow-2xs">
-                    <IconComponent className="w-5 h-5 text-[#9D00FF]" strokeWidth={2} />
-                  </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                      <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">
-                        {exp.role}
-                      </h3>
-                      <span className="text-slate-400 font-medium">·</span>
-                      <span className="text-sm sm:text-base font-semibold text-[#9D00FF]">
-                        {exp.organization}
-                      </span>
-                    </div>
-                    <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-1.5 max-w-3xl">
-                      {exp.summary}
-                    </p>
-                  </div>
+        {experiences.map((exp, idx) => (
+          <div
+            key={idx}
+            className={`rounded-3xl border p-6 sm:p-7 transition-all duration-200 ${
+              exp.highlighted
+                ? 'bg-[#9D00FF]/10 border-[#9D00FF]/30 shadow-[0_2px_8px_rgba(0,0,0,0.02)]'
+                : 'bg-white border-slate-200/80 hover:border-[#9D00FF]/30 shadow-xs'
+            }`}
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">
+                    {exp.role}
+                  </h3>
+                  <span className="text-slate-400 font-medium">·</span>
+                  <span className="text-sm sm:text-base font-semibold text-[#9D00FF]">
+                    {exp.organization}
+                  </span>
                 </div>
-
-                <div className="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-1 shrink-0 pl-15 md:pl-0 text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  <span className="text-slate-800">{exp.period}</span>
-                  <span>{exp.location}</span>
-                </div>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-1.5 max-w-3xl">
+                  {exp.summary}
+                </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200/60 md:ml-15">
-                {exp.tags.map((tag, tIdx) => (
-                  <span
-                    key={tIdx}
-                    className="px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-slate-200/80 text-slate-700"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              <div className="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-1 shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <span className="text-slate-800">{exp.period}</span>
+                <span>{exp.location}</span>
               </div>
             </div>
-          );
-        })}
+
+            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-200/60">
+              {exp.tags.map((tag, tIdx) => (
+                <span
+                  key={tIdx}
+                  className="text-xs font-medium text-slate-700"
+                >
+                  {tag}{tIdx < exp.tags.length - 1 ? ' ·' : ''}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
