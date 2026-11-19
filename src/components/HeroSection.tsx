@@ -37,14 +37,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-700 tracking-tight leading-snug flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <span className="relative inline-block px-1.5 py-0.5 z-0 font-medium text-slate-900">
             <span
-              className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10 transform -rotate-1"
+              className="absolute inset-0 bg-[#9D00FF]/15 rounded-md -z-10 transform -rotate-1"
               aria-hidden="true"
             />
             designing,
           </span>
           <span className="relative inline-block px-1.5 py-0.5 z-0 font-medium text-slate-900">
             <span
-              className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10 transform rotate-1"
+              className="absolute inset-0 bg-[#9D00FF]/15 rounded-md -z-10 transform rotate-1"
               aria-hidden="true"
             />
             researching,
@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           <span>and</span>
           <span className="relative inline-block px-2 py-0.5 z-0 font-medium text-slate-900">
             <span
-              className="absolute inset-0 bg-[#fde2e9] rounded-md -z-10"
+              className="absolute inset-0 bg-[#9D00FF]/15 rounded-md -z-10"
               aria-hidden="true"
             />
             diving into tech.
@@ -107,9 +107,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         </div>
 
         {/* Right card: What am i up to right now? */}
-        <div className="lg:col-span-4 p-7 md:p-8 bg-[#fdeef2] rounded-3xl border border-[#fbdbd3] shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex flex-col justify-center">
+        <div className="lg:col-span-4 p-7 md:p-8 bg-[#9D00FF]/10 rounded-3xl border border-[#9D00FF]/30 shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex flex-col justify-center">
           <h3 className="text-sm md:text-base font-semibold text-slate-900 mb-3 flex items-center gap-1.5">
-            <span className="text-pink-600 font-bold text-lg">✦</span>
+            <span className="text-[#9D00FF] font-bold text-lg">✦</span>
             <span>What am i up to right now?</span>
           </h3>
           <p className="text-slate-800 text-sm md:text-base leading-relaxed">
