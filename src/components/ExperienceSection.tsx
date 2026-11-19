@@ -28,13 +28,12 @@ export const ExperienceSection: React.FC = () => {
       tags: [],
     },
     {
-      role: 'Developer Contributor',
-      organization: 'Aethur Community Network',
+      role: 'Contributor',
+      organization: 'Aethur',
       period: '2026',
-      location: 'Remote',
       summary:
-        'Contributed development work and technical support across community-driven experiences and tools.',
-      tags: ['Development', 'Community', 'Web & Games'],
+        'As a core Contributor at Aethur, I actively engage with the community and optimize development strategies to drive massive engagement.',
+      tags: [],
     },
     {
       role: 'Indie Game & Web Developer',
