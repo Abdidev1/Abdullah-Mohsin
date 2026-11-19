@@ -35,15 +35,6 @@ export const ExperienceSection: React.FC = () => {
         'As a core Contributor at Aethur, I actively engage with the community and optimize development strategies to drive massive engagement.',
       tags: [],
     },
-    {
-      role: 'Indie Game & Web Developer',
-      organization: 'Personal & Web Projects',
-      period: '2025 – Present',
-      location: 'Lahore, Pakistan',
-      summary:
-        'Built web applications, interactive simulators, and small games focused on clean UI, clarity, and responsive interactions.',
-      tags: ['TypeScript', 'React', 'Web Apps'],
-    },
   ];
 
   return (
