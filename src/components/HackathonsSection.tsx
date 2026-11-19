@@ -1,27 +1,30 @@
 import React from 'react';
 
 interface HackathonItem {
-  title: string;
+  title?: string;
   event: string;
   period: string;
+  location?: string;
   summary: string;
 }
 
 export const HackathonsSection: React.FC = () => {
   const items: HackathonItem[] = [
     {
-      title: 'Co-Creator · Dungeon Crawler',
-      event: 'Hack Club Campfire',
-      period: '2026',
+      title: 'Dungeon Crawler',
+      event: 'Hackclub Campfire Flagship',
+      period: 'Feburary 2026',
+      location: 'Lahore, Pakistan',
       summary:
-        'Teamed up to build and ship a 2D maze game on Itch.io under game jam constraints.',
+        'I was in team dungeons where me made dungeon crawler under the theme below the surface',
     },
     {
-      title: 'Co-Creator · Deflecto',
-      event: 'Hack Club Haven Hackathon & Game Jam',
-      period: 'Nov 2026',
+      title: 'Deflecto',
+      event: 'Hackclub Haven',
+      period: 'November 2026',
+      location: 'Lahore, Pakistan',
       summary:
-        'Built and shipped a river-obstacle game collaboratively during the event in Lahore.',
+        'I was the leader of Team Sonion, where we made Deflecto under the theme bounce back.',
     },
   ];
 
@@ -48,10 +51,14 @@ export const HackathonsSection: React.FC = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
                 <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">
-                    {item.title}
-                  </h3>
-                  <span className="text-slate-400 font-medium">·</span>
+                  {item.title && (
+                    <>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight">
+                        {item.title}
+                      </h3>
+                      <span className="text-slate-400 font-medium">·</span>
+                    </>
+                  )}
                   <span className="text-sm sm:text-base font-semibold text-[#9D00FF]">
                     {item.event}
                   </span>
@@ -63,6 +70,7 @@ export const HackathonsSection: React.FC = () => {
 
               <div className="flex md:flex-col items-center md:items-end justify-between md:justify-center gap-1 shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 <span className="text-slate-800">{item.period}</span>
+                {item.location && <span>{item.location}</span>}
               </div>
             </div>
           </div>
