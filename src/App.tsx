@@ -123,7 +123,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 relative selection:bg-pink-100 selection:text-pink-900">
+    <div className="min-h-screen bg-white text-slate-900 relative selection:bg-[#9D00FF]/20 selection:text-[#9D00FF]">
       {/* Background architectural guideline borders */}
       <div className="fixed inset-0 pointer-events-none max-w-6xl mx-auto border-x border-slate-100/80 -z-10" />
 
